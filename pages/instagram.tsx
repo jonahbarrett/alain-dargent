@@ -3,7 +3,6 @@ import probe from 'probe-image-size';
 import { GetServerSideProps } from "next";
 import { Navbar } from "../components/Navbar";
 import Head from "next/head";
-import { AccessToken } from "../environment"
 
 
 export default function Instagram({ photos }: { photos: { media_url: string, caption: string, id: string, width: number, height: number }[] }) {
@@ -27,7 +26,7 @@ export default function Instagram({ photos }: { photos: { media_url: string, cap
 }
 
 export const getServerSideProps: GetServerSideProps = async () => {
-    const res = await fetch(`https://graph.instagram.com/me/media?fields=media_url,caption&access_token=${AccessToken}`);
+    const res = await fetch(`https://graph.instagram.com/me/media?fields=media_url,caption&access_token=${process.env.access_token}`);
     const data = await res.json();
 
     if (!data) {
