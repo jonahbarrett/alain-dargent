@@ -5,18 +5,26 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "build:css": "postcss styles/tailwind.css -o styles/main.css",
+    "build:watch": "postcss styles/tailwind.css -o styles/main.css --watch",
+    "prod:build": "NODE_ENV=production yarn run build:css && yarn run build"
   },
   "dependencies": {
+    "autoprefixer": "^10.4.0",
     "next": "12.0.4",
+    "postcss": "^8.3.11",
+    "postcss-cli": "^9.0.2",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "tailwindcss": "^2.2.19"
   },
   "devDependencies": {
     "@types/node": "16.11.9",
+    "@types/probe-image-size": "^7.0.1",
     "@types/react": "17.0.35",
     "eslint": "7",
     "eslint-config-next": "12.0.4",
+    "probe-image-size": "^7.2.2",
     "typescript": "4.5.2"
   }
 }
