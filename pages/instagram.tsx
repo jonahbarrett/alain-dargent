@@ -38,7 +38,9 @@ export const getServerSideProps: GetServerSideProps = async () => {
     const photos = await Promise.all(data.data.map(async (data: { media_url: string, caption: string, id: string }) => {
         let res = await probe(data.media_url);
         return {
-            ...data,
+            media_url: data.media_url.replace(/^[^.]*/, 'https://scontent'),
+            caption: data.caption,
+            id: data.id,
             width: res.width,
             height: res.height
         }
