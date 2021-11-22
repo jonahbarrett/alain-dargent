@@ -17,7 +17,7 @@ export default function Instagram({ photos }: { photos: { media_url: string, cap
                 {photos.map(({ media_url, caption, id, width, height }) => (
                     <figure key={id} className="mx-auto p-5 max-w-screen-lg">
                         <Image src={media_url} layout='responsive' width={width} height={height} alt='Poetry'></Image>
-                        <figcaption className="text-white pt-2">{caption}</figcaption>
+                        <figcaption className="text-white font-serif pt-2">{caption}</figcaption>
                     </figure>
                 ))}
             </main>
