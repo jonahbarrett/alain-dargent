@@ -14,24 +14,19 @@ const Home: NextPage = () => {
       </Head>
       <Navbar />
       <main className='flex flex-col min-h-screen justify-center items-center mb-10'>
-        <div className=''>
+        <div className='mt-20'>
           <figure className='pb-4'>
             <Image src={flowers} alt='Welcome to my website' ></Image>
           </figure>
-          <h1 className='text-3xl font-bold text-white mt-10 pb-2 font-serif'>
-            About
-          </h1>
           <p className='text-base text-white'>
-            Lil blurb maybe
-          </p>
-          <p className='text-base text-white mt-5'>
-            Check out my <Link href="/poetry"><a className="border-b-2 border-white border-dotted">poetry</a></Link>.
+            <Link href="/poetry"><a className="border-b border-white border-dotted">As intermittent forms become distorted through emergent and critical practice,<br />the observer is left with a tribute to the edges of our era.</a></Link>
           </p>
           <h1 className='text-3xl font-bold text-white mt-10 pb-2 font-serif'>
-            Contact
+            Commune with me
           </h1>
           <p className='text-base text-white'>
-            Send me an email
+            instagram &raquo; <span className='font-mono'>@alaindargent_</span><br />
+            email&nbsp; &nbsp; &nbsp; &nbsp; &raquo; <span className='font-mono'>troubadour@alaindargent.com</span>
           </p>
         </div>
       </main>
