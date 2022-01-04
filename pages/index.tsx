@@ -13,8 +13,8 @@ const Home: NextPage = () => {
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <Navbar />
-      <main className='flex flex-col min-h-screen justify-center items-center mb-10'>
-        <div className='mt-20'>
+      <main className='flex flex-col min-h-screen md:justify-center items-center mb-10'>
+        <div className='mt-5 md:mt-20'>
           <figure className='pb-4'>
             <Image src={flowers} alt='Welcome to my website' ></Image>
           </figure>
